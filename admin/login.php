@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 
 session_start();
 require_once '../config/database.php';
@@ -52,9 +52,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
-    <div class="card p-4 shadow" style="width: 350px;">
-        <h3 class="text-center mb-4">دخول الإدارة</h3>
-        
+    <div class="card p-4 shadow" style="width: 350px; border: 2px solid #dc3545;">
+    
+        <h3 class="text-center mb-1">دخول الإدارة</h3>
+        <div class="text-center mb-2">
+            <span class="badge bg-danger" style="font-size: 1rem;">ADMIN</span>
+        </div>
+        <p class="text-center text-muted mb-3" style="font-size: 0.95rem;">لوحة تحكم خاصة بالإدارة فقط</p>
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="../assets/logo.png" alt="Logo" style="max-width:150px;">
+        </div>
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
         <?php endif; ?>

@@ -42,6 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
     <div class="card p-4 shadow" style="width: 350px;">
         <h3 class="text-center mb-4">تسجيل الدخول</h3>
+        <div style="text-align:center; margin-bottom:20px;">
+            <img src="assets/logo.png" alt="Logo" style="max-width:150px;">
+        </div>
         
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= $error ?></div>
